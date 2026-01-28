@@ -15,7 +15,7 @@
     </p>
 </div>
 
-# Devup2332 neovim configuration
+# Diego Rojas neovim configuration
 
 This is my personal configuration for Neovim for 2024
 
