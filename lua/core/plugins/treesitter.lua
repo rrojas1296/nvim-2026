@@ -17,6 +17,11 @@ return {
       "dart",
       "fish",
       "gitignore",
+      "gitcommit",
+      "git_rebase",
+      "gitattributes",
+      "git_config",
+      "dot",
       "go",
       "json",
       "kitty",
@@ -33,9 +38,12 @@ return {
       "zsh",
     })
     vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
-      pattern = { "*" },
-      callback = function()
-        vim.treesitter.start()
+      callback = function(args)
+        if vim.bo[args.buf].buftype ~= "" then
+          return
+        end
+
+        pcall(vim.treesitter.start, args.buf)
       end,
     })
   end,
