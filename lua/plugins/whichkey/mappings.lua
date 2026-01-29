@@ -1,7 +1,6 @@
 return {
   { "<leader>e", "<cmd>Neotree toggle <cr>", desc = "Open Explorer", mode = "n", icon = "󰈞 " },
   { "<leader>w", "<cmd>:write <cr>", desc = "Save file", mode = "n", icon = " " },
-  { "<leader>q", "<cmd>qa <cr>", desc = "Quit Nvim", mode = "n", icon = "󰈆 " },
   { "<leader>a", "<cmd>Dashboard<cr>", desc = "Dashboard", mode = "n", icon = " " },
   {
     "<leader>f",
@@ -88,5 +87,15 @@ return {
       ,
       desc = "Search and replace"
     },
+  },
+  {
+    "<leader>q",
+    group = "Session",
+    icon = " ",
+    { "<leader>qs", function() require("persistence").load() end,                desc = "Load" },
+    { "<leader>qS", function() require("persistence").select() end,              desc = "Select session" },
+    { "<leader>ql", function() require("persistence").load({ last = true }) end, desc = "Load last session" },
+    { "<leader>qd", function() require("persistence").stop() end,                desc = "Don't save session" },
+    { "<leader>qq", "<cmd>qa! <cr>",                                             desc = "Quit Session",      mode = "n" },
   }
 }
