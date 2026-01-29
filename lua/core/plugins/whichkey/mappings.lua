@@ -7,6 +7,7 @@ return {
     icon = "",
     { "<leader>ff", "<cmd> Telescope find_files <cr>", desc = "Find files", icon = "󰈞" },
     { "<leader>ft", "<cmd> Telescope live_grep <cr>", desc = "Find text", icon = "󰈞" },
+    { "<leader>fc", "<cmd> Telescope colorscheme <cr>", desc = "Colorschemes", icon = "󰈞" },
   },
   { "<leader>q", "<cmd>qa <cr>", desc = "Quit Nvim", mode = "n", icon = "󰈆" },
   { "<leader>a", "<cmd>Dashboard<cr>", desc = "Dashboard", mode = "n", icon = "󰈞" },
