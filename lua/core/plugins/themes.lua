@@ -7,4 +7,5 @@ return {
 	{ "sainnhe/gruvbox-material", lazy = true },
 	{ "olimorris/onedarkpro.nvim", lazy = true },
 	{ "Mofiqul/dracula.nvim", lazy = true },
+	{ "craftzdog/solarized-osaka.nvim", lazy = true, opts = { transparent = false } },
 }

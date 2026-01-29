@@ -26,4 +26,4 @@ lazy.setup({
 	checker = { enabled = false },
 })
 
-vim.cmd.colorscheme("tokyonight-moon")
+vim.cmd.colorscheme("solarized-osaka")
