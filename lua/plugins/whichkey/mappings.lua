@@ -32,6 +32,7 @@ return {
     icon = "󰈙 ",
     { "<leader>ls", "<cmd>Lspsaga show_line_diagnostics<cr>", desc = "Show diagnostic" },
     { "<leader>la", "<cmd>Lspsaga code_action<cr>",           desc = "Code actions" },
+    { "<leader>lm", "<cmd>Mason<cr>",                         desc = "Mason" },
     {
       "<leader>lf",
       function()
@@ -65,4 +66,13 @@ return {
     { "<leader>tr", "<cmd>TransparentEnable<cr>",  desc = "Enable transparency" },
     { "<leader>td", "<cmd>TransparentDisable<cr>", desc = "Disable transparency" },
   },
+  {
+    "<leader>z",
+    group = "Lazy",
+    icon = "󰒲 ",
+    { "<leader>zz", "<cmd>Lazy<cr>",        desc = "Lazy" },
+    { "<leader>zu", "<cmd>Lazy update<cr>", desc = "Lazy update" },
+    { "<leader>zx", "<cmd>Lazy clean<cr>",  desc = "Lazy clear" },
+    { "<leader>zs", "<cmd>Lazy sync<cr>",   desc = "Lazy sync" },
+  }
 }

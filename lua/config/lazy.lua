@@ -22,8 +22,8 @@ lazy.setup({
     { import = "plugins" },
     { import = "plugins.lsp" },
   },
-  install = { colorscheme = { "tokynight-moon" } },
-  checker = { enabled = true },
+  install = { colorscheme = { "solarized-osaka" } },
+  checker = { enabled = false },
 })
 
 vim.cmd.colorscheme("solarized-osaka")
