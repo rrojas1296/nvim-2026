@@ -7,9 +7,6 @@ return {
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-cmdline",
 
-		"hrsh7th/cmp-vsnip",
-		"hrsh7th/vim-vsnip",
-
 		"L3MON4D3/LuaSnip",
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
@@ -33,8 +30,23 @@ return {
 		local cmp = require("cmp")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 		local vscode_snippets = require("luasnip.loaders.from_vscode")
+		local snippets = require("luasnip.loaders.from_lua")
+		local ls = require("luasnip")
+
+		vim.keymap.set({ "i", "s" }, "<C-j>", function()
+			if ls.expand_or_jumpable() then
+				ls.expand_or_jump()
+			end
+		end, { silent = true })
+
+		vim.keymap.set({ "i", "s" }, "<C-k>", function()
+			if ls.jumpable(-1) then
+				ls.jump(-1)
+			end
+		end, { silent = true })
 
 		vscode_snippets.lazy_load()
+		snippets.lazy_load({ paths = { "~/.config/nvim/lua/core/snippets" } })
 
 		local kind_icons = {
 			Text = "",
@@ -67,7 +79,7 @@ return {
 		cmp.setup({
 			snippet = {
 				expand = function(args)
-					vim.fn["vsnip#anonymous"](args.body)
+					ls.lsp_expand(args.body)
 				end,
 			},
 			formatting = {
@@ -109,7 +121,6 @@ return {
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
-				{ name = "vsnip" },
 				{ name = "luasnip" },
 				{ name = "path" },
 			}, {

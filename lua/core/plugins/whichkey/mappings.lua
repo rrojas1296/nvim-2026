@@ -11,6 +11,7 @@ return {
 		{ "<leader>ft", "<cmd> Telescope live_grep <cr>", desc = "Find text" },
 		{ "<leader>fc", "<cmd> Telescope colorscheme <cr>", desc = "Colorschemes" },
 		{ "<leader>fs", "<cmd> Telescope git_status <cr>", desc = "Search changed files" },
+		{ "<leader>fs", "<cmd> Telescope buffers <cr>", desc = "Search Buffers" },
 	},
 	{
 		"<leader>g",
