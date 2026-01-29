@@ -3,7 +3,7 @@ return {
 	event = "VeryLazy",
 	config = function()
 		local whichKey = require("which-key")
-		local mappings = require("core.plugins.whichkey.mappings")
+		local mappings = require("plugins.whichkey.mappings")
 		whichKey.setup({
 			triggers = {
 				{
