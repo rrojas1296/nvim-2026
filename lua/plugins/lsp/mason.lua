@@ -1,19 +1,5 @@
 return {
   "mason-org/mason-lspconfig.nvim",
-  opts = {
-    ensure_installed = {
-      "ts_ls",
-      "html",
-      "cssls",
-      "tailwindcss",
-      "emmet_ls",
-      "prismals",
-      "lua_ls",
-      "eslint",
-      "pyright",
-      "graphql",
-    },
-  },
   dependencies = {
     {
       "mason-org/mason.nvim",
@@ -29,10 +15,14 @@ return {
     },
     "neovim/nvim-lspconfig",
   },
-  config = function(_, opts)
+  config = function()
     local mason_lspconfig = require("mason-lspconfig")
+    local servers = require('config.servers')
 
-    mason_lspconfig.setup(opts)
+    mason_lspconfig.setup({
+      ensure_installed = servers,
+      automatic_enabled = true,
+    })
 
     local severity = vim.diagnostic.severity
 

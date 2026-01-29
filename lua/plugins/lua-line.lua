@@ -1,6 +1,6 @@
 return {
-	"nvim-lualine/lualine.nvim",
-	opts = {
-		theme = "tokyonight-moon",
-	},
+  "nvim-lualine/lualine.nvim",
+  opts = {
+    theme = "tokyonight-moon",
+  },
 }

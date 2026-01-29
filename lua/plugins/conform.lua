@@ -1,36 +1,36 @@
 return {
-	"stevearc/conform.nvim",
-	config = function()
-		local conform = require("conform")
-		conform.setup({
-			formatters_by_ft = {
-				typescript = { "prettier" },
-				typescriptreact = { "prettier" },
-				javascript = { "prettier" },
-				javascriptreact = { "prettier" },
-				html = { "prettier" },
-				css = { "prettier" },
-				scss = { "prettier" },
-				json = { "prettier" },
-				lua = { "stylua" },
-				markdown = { "prettier" },
-				prisma = { "prisma" },
-			},
-		})
+  "stevearc/conform.nvim",
+  config = function()
+    local conform = require("conform")
+    conform.setup({
+      formatters_by_ft = {
+        typescript = { "prettier" },
+        typescriptreact = { "prettier" },
+        javascript = { "prettier" },
+        javascriptreact = { "prettier" },
+        html = { "prettier" },
+        css = { "prettier" },
+        scss = { "prettier" },
+        json = { "prettier" },
+        lua = { "stylua" },
+        markdown = { "prettier" },
+        prisma = { "prisma" },
+      },
+    })
 
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			callback = function(args)
-				-- Skip Prisma files
-				if vim.bo[args.buf].filetype == "prisma" then
-					return
-				end
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      callback = function(args)
+        -- Skip Prisma files
+        if vim.bo[args.buf].filetype == "prisma" then
+          return
+        end
 
-				require("conform").format({
-					bufnr = args.buf,
-					timeout_ms = 5000,
-					lsp_fallback = true,
-				})
-			end,
-		})
-	end,
+        require("conform").format({
+          bufnr = args.buf,
+          timeout_ms = 5000,
+          lsp_fallback = true,
+        })
+      end,
+    })
+  end,
 }

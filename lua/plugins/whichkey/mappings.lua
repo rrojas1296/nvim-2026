@@ -48,6 +48,7 @@ return {
     group = "Split",
     icon = "󰨑 ",
     { "<leader>vs", "<cmd>vsplit<cr>", desc = "Vertical split" },
+    { "<leader>vp", "<cmd>split<cr>",  desc = "Horizontal split" },
   },
   {
     "<leader>b",
