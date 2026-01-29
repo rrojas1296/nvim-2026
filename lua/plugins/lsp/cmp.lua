@@ -72,9 +72,7 @@ return {
         fields = { "kind", "abbr", "menu" },
         expandable_indicator = false,
         format = function(entry, vim_item)
-          -- Kind icons
           vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
-          -- Source
           vim_item.menu = ({
             buffer = "[Buffer]",
             nvim_lsp = "[LSP]",

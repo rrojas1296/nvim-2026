@@ -20,7 +20,6 @@ return {
 
     vim.api.nvim_create_autocmd("BufWritePre", {
       callback = function(args)
-        -- Skip Prisma files
         if vim.bo[args.buf].filetype == "prisma" then
           return
         end
