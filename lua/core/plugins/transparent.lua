@@ -51,6 +51,16 @@ return {
 			"TelescopePromptTitle",
 			"TelescopeResultsTitle",
 			"TelescopePreviewTitle",
+
+			"NoiceNormal",
+			"NoiceBorder",
+			"NoiceCmdlinePopup",
+			"NoiceCmdlinePopupBorder",
+			"NoiceCmdlinePopupTitle",
+			"NoicePopup",
+			"NoicePopupBorder",
+			"NoiceConfirm",
+			"NoiceConfirmBorder",
 		},
 	},
 }
