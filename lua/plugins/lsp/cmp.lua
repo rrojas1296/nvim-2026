@@ -32,7 +32,7 @@ return {
     end, { silent = true })
 
     vscode_snippets.lazy_load()
-    snippets.lazy_load({ paths = { "~/.config/nvim/lua/snippets" } })
+    snippets.lazy_load({ path2 = { "~/.config/nvim/lua/snippets" } })
 
     local kind_icons = {
       Text = "",

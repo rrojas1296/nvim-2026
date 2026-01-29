@@ -75,5 +75,18 @@ return {
     { "<leader>zu", "<cmd>Lazy update<cr>", desc = "Lazy update" },
     { "<leader>zx", "<cmd>Lazy clean<cr>",  desc = "Lazy clear" },
     { "<leader>zs", "<cmd>Lazy sync<cr>",   desc = "Lazy sync" },
+  },
+  {
+    "<leader>r",
+    group = "Replace",
+    icon = "󰑯 ",
+    {
+      "<leader>rr",
+      function()
+        require('grug-far').open({ prefills = { paths = vim.fn.expand("%") } })
+      end
+      ,
+      desc = "Search and replace"
+    },
   }
 }
