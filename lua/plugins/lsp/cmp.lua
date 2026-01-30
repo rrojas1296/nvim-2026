@@ -116,21 +116,14 @@ return {
 
     local capabilities = cmp_nvim_lsp.default_capabilities()
 
+    vim.lsp.config('*', {
+      capabilities = capabilities
+    })
+
     for _, server_name in pairs(servers) do
-      if server_name == 'tailwindcss' then
-        vim.lsp.config(server_name, {
-          capabilities = capabilities,
-          settings = {
-            tailwindCSS = {
-              classFunctions = { "cva", "cx" },
-            },
-          },
-        })
-      else
-        vim.lsp.config(server_name, {
-          capabilities = capabilities,
-        })
-      end
+      vim.lsp.config(server_name, {
+        capabilities = capabilities,
+      })
     end
   end,
 }
