@@ -11,7 +11,7 @@ return {
     { "<leader>fc", "<cmd> Telescope colorscheme <cr>",  desc = "Colorschemes" },
     { "<leader>fs", "<cmd> Telescope git_status <cr>",   desc = "Search changed files" },
     { "<leader>fb", "<cmd> Telescope buffers <cr>",      desc = "Search Buffers" },
-    { "<leader>fb", "<cmd> Telescope git_branches <cr>", desc = "Search Branches" },
+    { "<leader>fB", "<cmd> Telescope git_branches <cr>", desc = "Search Branches" },
   },
   {
     "<leader>g",
