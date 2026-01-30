@@ -18,6 +18,7 @@ return {
     local snippets = require("luasnip.loaders.from_lua")
     local ls = require("luasnip")
     local servers = require("config.servers")
+    local tailwind_colors = require("tailwindcss-colorizer-cmp")
 
     vim.keymap.set({ "i", "s" }, "<C-j>", function()
       if ls.expand_or_jumpable() then
@@ -79,10 +80,10 @@ return {
             path = "[Path]",
             luasnip = "[LuaSnip]",
             nvim_lua = "[Lua]",
-            latex_symbols = "[LaTeX]",
             vsnip = "[VSnip]",
             codeium = "[Codeium]",
           })[entry.source.name]
+          vim_item = tailwind_colors.formatter(entry, vim_item)
           return vim_item
         end,
       },
