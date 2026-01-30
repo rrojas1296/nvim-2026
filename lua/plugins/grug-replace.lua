@@ -4,7 +4,7 @@ return {
     local grug = require("grug-far")
     grug.setup({
       prefills = {
-        path2 = vim.fn.expand("%")
+        path = vim.fn.expand("%")
       }
     })
   end,
