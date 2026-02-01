@@ -30,15 +30,11 @@ return {
       "EndOfBuffer",
     },
     extra_groups = {
-      "NeoTreeNormal",
-      "NeoTreeNormalNC",
-      "NeoTreeEndOfBuffer",
-      "NeoTreeWinSeparator",
-      "NeoTreeStatusLine",
-      "NeoTreeStatusLineNC",
-
-      "NeoTreeFloatNormal",
-      "NeoTreeFloatBorder",
+      "NvimTreeNormal",
+      "NvimTreeNormalFloat",
+      "NvimTreeNormalFloatBorder",
+      "NvimTreeNormalNC",
+      "NvimTreePopup",
 
       "TelescopeNormal",
       "TelescopeBorder",

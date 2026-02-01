@@ -1,5 +1,5 @@
 return {
-  { "<leader>e", "<cmd>Neotree toggle <cr>", desc = "Open Explorer", mode = "n", icon = "󰈞 " },
+  { "<leader>e", "<cmd>NvimTreeToggle <cr>", desc = "Open Explorer", mode = "n", icon = "󰈞 " },
   { "<leader>w", "<cmd>:write <cr>", desc = "Save file", mode = "n", icon = " " },
   { "<leader>a", "<cmd>Dashboard<cr>", desc = "Dashboard", mode = "n", icon = " " },
   {
