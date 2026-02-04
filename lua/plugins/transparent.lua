@@ -31,10 +31,12 @@ return {
     },
     extra_groups = {
       "NvimTreeNormal",
-      "NvimTreeNormalFloat",
-      "NvimTreeNormalFloatBorder",
       "NvimTreeNormalNC",
-      "NvimTreePopup",
+      "NvimTreeEndOfBuffer",
+      "NvimTreeVertSplit",
+      "NvimTreeWinSeparator",
+      "NvimTreeCursorLine",
+      "NvimTreeCursorLineNr",
 
       "TelescopeNormal",
       "TelescopeBorder",
