@@ -11,6 +11,7 @@ return {
       api.config.mappings.default_on_attach(bufnr)
 
       vim.keymap.set('n', 'l', api.node.open.edit, opts('Open File'))
+      vim.keymap.set('n', 'Z', api.tree.collapse_all, opts('Open File'))
     end
     nvim_tree.setup({
       on_attach = on_attach,
