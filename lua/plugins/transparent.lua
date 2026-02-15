@@ -59,6 +59,15 @@ return {
       "NoicePopupBorder",
       "NoiceConfirm",
       "NoiceConfirmBorder",
+
+      "BufferLineFill",
+      "BufferLineBackground",
+      "BufferLineBuffer",
+      "BufferLineBufferSelected",
+      "BufferLineBufferVisible",
+      "BufferLineSeparator",
+      "BufferLineSeparatorSelected",
+      "BufferLineIndicatorSelected",
     },
   },
 }
