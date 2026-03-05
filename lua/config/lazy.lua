@@ -22,7 +22,7 @@ lazy.setup({
     { import = "plugins" },
     { import = "plugins.lsp" },
   },
-  install = { colorscheme = { "solarized-osaka" } },
+  install = { colorscheme = { "tokyonight-moon" } },
   checker = { enabled = false },
 })
 
