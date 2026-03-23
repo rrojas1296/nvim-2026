@@ -5,36 +5,37 @@ return {
   config = function()
     local treesitter = require("nvim-treesitter")
     treesitter.install({
-      "typescript",
-      "javascript",
-      "html",
-      "graphql",
-      "sql",
       "angular",
       "astro",
       "bash",
       "css",
       "dart",
-      "fish",
-      "gitignore",
-      "gitcommit",
-      "git_rebase",
-      "gitattributes",
-      "git_config",
       "dot",
+      "fish",
+      "git_config",
+      "gitattributes",
+      "gitcommit",
+      "gitignore",
+      "git_rebase",
       "go",
+      "graphql",
+      "html",
+      "javascript",
       "json",
       "kitty",
       "lua",
       "luadoc",
-      "markdown",
       "make",
+      "markdown",
       "nginx",
       "prisma",
       "python",
+      "sql",
       "tmux",
       "tsx",
+      "typescript",
       "vim",
+      "vue",
       "zsh",
     })
     vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
@@ -46,5 +47,5 @@ return {
         pcall(vim.treesitter.start, args.buf)
       end,
     })
-  end,
+  end
 }

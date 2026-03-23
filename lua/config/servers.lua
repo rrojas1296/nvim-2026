@@ -9,4 +9,7 @@ return {
   "eslint",
   "pyright",
   "graphql",
+  "angularls",
+  "vtsls",
+  "vue_ls"
 }
