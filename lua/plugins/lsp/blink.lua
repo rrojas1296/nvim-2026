@@ -20,7 +20,24 @@ return {
           border = "rounded"
         }
       },
-      menu = { border = "rounded" }
+      menu = {
+        border = "rounded",
+        draw = {
+          columns = {
+            { "kind", },
+            { "kind_icon" },
+            { "label",      gap = 2 },
+            { "source_name" },
+          },
+          components = {
+            source_name = {
+              text = function(ctx)
+                return "[" .. ctx.source_name .. "]"
+              end,
+            },
+          },
+        }
+      }
     },
 
     sources = {
