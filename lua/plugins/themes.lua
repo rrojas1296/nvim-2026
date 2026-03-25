@@ -1,5 +1,5 @@
 return {
-  { "folke/tokyonight.nvim",            lazy = true },
+  { "folke/tokyonight.nvim",            lazy = true,         opts = { transparent = false } },
   { "catppuccin/nvim",                  name = "catppuccin", lazy = true },
   { "rebelot/kanagawa.nvim",            lazy = true },
   { "Mofiqul/vscode.nvim",              lazy = true },
