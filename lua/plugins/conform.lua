@@ -15,7 +15,7 @@ return {
         lua = { "stylua" },
         markdown = { "prettier" },
         prisma = { "prisma" },
-        angular = { "prettier" },
+        htmlangular = { "prettier" },
         vue = { "prettier" }
       },
     })
