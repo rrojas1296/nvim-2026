@@ -16,16 +16,13 @@ return {
         markdown = { "prettier" },
         prisma = { "prisma" },
         htmlangular = { "prettier" },
-        vue = { "prettier" }
+        vue = { "prettier" },
+        jsonc = { "prettier" }
       },
     })
 
     vim.api.nvim_create_autocmd("BufWritePre", {
       callback = function(args)
-        if vim.bo[args.buf].filetype == "prisma" then
-          return
-        end
-
         require("conform").format({
           bufnr = args.buf,
           timeout_ms = 5000,
