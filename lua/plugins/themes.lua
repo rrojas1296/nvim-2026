@@ -9,4 +9,5 @@ return {
   { "Mofiqul/dracula.nvim",             lazy = true },
   { "craftzdog/solarized-osaka.nvim",   lazy = true,         opts = { transparent = false } },
   { "nyoom-engineering/oxocarbon.nvim", lazy = true },
+  { "sainnhe/everforest",               lazy = true }
 }

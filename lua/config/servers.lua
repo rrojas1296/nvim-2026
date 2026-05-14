@@ -10,5 +10,6 @@ return {
   "pyright",
   "graphql",
   "angularls",
-  "vue_ls"
+  "vue_ls",
+  "prettier"
 }

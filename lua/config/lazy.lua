@@ -22,8 +22,8 @@ lazy.setup({
     { import = "plugins" },
     { import = "plugins.lsp" },
   },
-  install = { colorscheme = { "tokyonight-night" } },
+  install = { colorscheme = { "everforest" } },
   checker = { enabled = false },
 })
 
-vim.cmd.colorscheme("tokyonight-night")
+vim.cmd.colorscheme("everforest")
