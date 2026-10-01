@@ -11,5 +11,4 @@ return {
   "graphql",
   "angularls",
   "vue_ls",
-  "prettier"
 }
