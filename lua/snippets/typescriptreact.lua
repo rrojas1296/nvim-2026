@@ -29,15 +29,17 @@ return {
     "rsc",
     fmt(
       [[
-      const {} = () => {{
-        return <div>{}</div>;
-      }};
+    const {} = () => {{
+      return (
+        {}
+      );
+    }};
 
-      export default {};
-      ]],
+    export default {};
+    ]],
       {
         i(1, "ComponentName"),
-        rep(1),
+        i(0, "<div></div>"),
         rep(1),
       }
     )
